@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduConnect - Learning Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        nav {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .games-container {
+            padding: 20px;
+            text-align: center;
+        }
+        .game-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .game-card {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            transition: transform 0.2s;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        .game-card button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .game-card button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">EduConnect</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="games.html">Learning Games</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="games-container">
+        <h1>Learning Games</h1>
+        <p>Engage with our interactive games designed to enhance your learning experience and make education fun!</p>
+        
+        <div class="game-grid">
+            <div class="game-card">
+                <h3>Math Quiz</h3>
+                <p>Test your mathematical skills and earn points!</p>
+                <button onclick="startMathGame()">Play Now</button>
+            </div>
+            
+            <div class="game-card">
+                <h3>Vocabulary Builder</h3>
+                <p>Expand your vocabulary with fun challenges!</p>
+                <button onclick="startVocabGame()">Play Now</button>
+            </div>
+            
+            <div class="game-card">
+                <h3>Science Trivia</h3>
+                <p>Challenge your knowledge of science with quizzes!</p>
+                <button onclick="startScienceGame()">Play Now</button>
+            </div>
+            
+            <div class="game-card">
+                <h3>Geography Challenge</h3>
+                <p>Learn about countries and capitals through engaging quizzes!</p>
+                <button onclick="startGeographyGame()">Play Now</button>
+            </div>
+        </div>
+
+        <div id="game-container"></div>
+    </div>
+
+    <script src="games.js"></script>
+</body>
+</html>
